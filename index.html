@@ -47,19 +47,80 @@
   >
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr Edouard Branly",
-    "url": "https://drbranly.fr/",
-    "telephone": "+33955578842",
-    "email": "branly.edouard@free.fr",
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Grand Est"
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "@id": "https://drbranly.fr/#physician",
+
+  "name": "Dr Edouard Branly",
+  "url": "https://drbranly.fr/",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "RPPS",
+    "value": "10003985043"
+  },
+
+  "medicalSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Médecine vasculaire et angiologie"
+  },
+
+  "telephone": "+33955578842",
+  "email": "branly.edouard@free.fr",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[adresse exacte du cabinet]",
+    "postalCode": "[code postal]",
+    "addressLocality": "Troyes",
+    "addressRegion": "Grand Est",
+    "addressCountry": "FR"
+  },
+
+  "areaServed": {
+    "@type": "City",
+    "name": "Troyes"
+  },
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "09:00",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "14:00",
+      "closes": "18:00"
     }
+  ],
+
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://drbranly.fr/logo.png"
+  },
+
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://drbranly.fr/og-image.jpg"
   }
-  </script>
+}
+</script>
 
   <style>
     :root {
